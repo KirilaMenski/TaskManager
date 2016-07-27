@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+	<http pattern="/jsp/js/**" security="none" />
+	<http pattern="/jsp/style.css" security="none" />
+	<http pattern="/jsp/404.jsp" security="none" />
+
+	<http use-expressions="true">
+		<intercept-url pattern="/registr_page" access="isAnonymous()" />
+		<intercept-url pattern="/add_user" access="isAnonymous()" />
+		<intercept-url pattern="/login" access="isAnonymous()" />
+		<intercept-url pattern="/**" access="isAuthenticated()" />
+		<form-login login-page="/login" login-processing-url="/j_spring_security_check"
+			authentication-failure-url="/login?error" username-parameter="j_username"
+			password-parameter="j_password" default-target-url="/project"
+			always-use-default-target="true"/>
+		<logout logout-url="/logout" logout-success-url="/login?logout" />
+	</http>
+
+	<beans:bean id="daoAuthenticationProvider"
+		class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+		<beans:property name="userDetailsService" ref="userDetailsService"></beans:property>
+	</beans:bean>
+
+	<beans:bean id="authenticationManager"
+		class="org.springframework.security.authentication.ProviderManager">
+		<beans:constructor-arg>
+			<beans:list>
+				<beans:ref bean="daoAuthenticationProvider" />
+			</beans:list>
+		</beans:constructor-arg>
+	</beans:bean>
+
+	<authentication-manager>
+		<authentication-provider user-service-ref="userDetailsService">
+			<password-encoder hash="md5"></password-encoder>
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

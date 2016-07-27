@@ -1,0 +1,405 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(circle, #E8E8E8, #BDBDBD);
+}
+
+body a {
+	text-decoration: none;
+}
+
+body a:hover {
+	color: red;
+}
+
+#main-container {
+	width: 80%;
+	min-height: 100%;
+	margin: auto;
+}
+
+#flag{
+	width: 90%;
+	height: 25px;
+	margin: auto;
+	padding: 10px;
+	font-size: 25px;
+}
+
+/*Login page style*/
+.login-container {
+	width: 300px;
+	height: 250px;
+	border-radius: 5pt;
+	font-size: 18pt;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	margin: 15% auto;
+}
+
+.login-container input {
+	width: 100%;
+	height: 30px;
+	border-radius: 5pt;
+}
+
+.login-container button {
+	width: 100%;
+	height: 40px;
+	background: #17B9FF;
+	border-radius: 5pt;
+}
+
+.login-container p {
+	margin: 20px auto;
+}
+
+/*Registration page style*/
+.registration-container {
+	width: 300px;
+	height: 250px;
+	border-radius: 5pt;
+	font-size: 18pt;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	margin: 15% auto;
+}
+
+.registration-container input, select {
+	width: 100%;
+	height: 30px;
+	border-radius: 5pt;
+}
+
+#reg-btn {
+	width: 100%;
+	height: 40px;
+	background: #17B9FF;
+	border-radius: 5pt;
+}
+
+.registration-container p {
+	margin: 20px auto;
+}
+
+/*Hello page style*/
+#welcome-container {
+	width: 600px;
+	height: 400px;
+	font-size: 50px;
+	text-align: center;
+	margin: 20% auto;
+}
+
+/*Project pae style*/
+#userproperty-bar {
+	padding: 10px 0 10px 0;
+	width: 90%;
+	heght: 50px;
+	text-align: right;
+	font-size: 20px;
+	text-decoration: underline;
+}
+
+#add-project {
+	text-align: center;
+	width: 300px;
+	height: 500px;
+	margin: 0 auto 50px auto;
+	display: none;
+}
+
+#add-project input {
+	width: 200px;
+	height: 30px;
+	margin: 10px 0 5px 0;
+}
+
+#add-project textarea {
+	width: 290px;
+	height: 300px;
+	resize: none;
+}
+
+#add {
+	margin: 10px;
+}
+
+#proj-main-container {
+	width: 90%;
+	min-height: 1000px;
+	margin: auto;
+}
+
+#project-container {
+	float: left;
+	width: 300px;
+	height: 400px;
+	background: white;
+	border-radius: 10px;
+	margin: 10px;
+	text-align: center;
+}
+
+#project-container:hover {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+	background: #C6FFB8;
+}
+
+#proj-title {
+	width: 250px;
+	height: 20px;
+	margin: 0 auto 5px auto;
+	padding: 5px 0 5px 0;
+	font-size: 20px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#proj-date {
+	width: 290px;
+	height: 25px;
+	margin: auto;
+	padding: 5px 0 5px 10px;
+	text-align: left;
+	text-decoration: underline;
+}
+
+#proj-author {
+	width: 290px;
+	height: 25px;
+	margin: auto;
+	padding: 5px 0 5px 10px;
+	text-align: left;
+	text-decoration: underline;
+}
+
+#proj-description {
+	width: 290px;
+	height: 260px;
+	margin: auto;
+	text-align: justify;
+	word-wrap: break-word;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#delete-proj-img {
+	float: right; width : 30px;
+	height: 30px;
+	background: url(res/close.png);
+	width: 30px;
+}
+
+/*View project page style*/
+#view-container {
+	width: 90%;
+	min-height: 500px;
+	background: white;
+	border-radius: 5px;
+	margin: auto;
+	padding: 20px;
+}
+
+#view-title {
+	font-size: 50px;
+	margin: 5px 0 20px 0;
+}
+
+#view-date {
+	text-decoration: underline;
+}
+
+#view-status{
+	color: green;
+	margin: 10px 0 10px 0;
+}
+
+#view-edit {
+	cursor: pointer;
+	margin: 10px 0 10px 0;
+	color: blue;
+}
+
+#view-edit:hover {
+	color: red;
+}
+
+#view-description {
+	margin: 20px 0 0 0;
+	word-wrap: break-word;
+	text-align: justify;
+}
+
+#view-edit-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 400px;
+	height: 500px;
+	background: #FAF5DE;
+	padding: 20px;
+	border-radius: 5px;
+	display: none;
+}
+
+#view-ed-title{
+	width: 100%;
+	margin: 5px 0 10px 0;
+}
+
+#view-ed-description{
+	resize: none;
+	width: 100%;
+	height: 320px;
+	margin: 10px 0 10px 0;
+}
+
+#view-ed-status{
+	margin: 10px 0 0 0;
+}
+
+#view-proj-task-main-container {
+	width: 85%;
+	min-height: 1000px;
+	margin: auto;
+}
+
+#task-container {
+	float: left;
+	width: 300px;
+	height: 400px;
+	background: white;
+	border-radius: 10px;
+	margin: 10px;
+	text-align: center;
+}
+
+#task-container:hover {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+	background: #C6FFB8;
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+#view-proj-task-title {
+	width: 250px;
+	height: 20px;
+	margin: 0 auto 5px auto;
+	padding: 5px 0 5px 0;
+	font-size: 20px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#view-proj-task-date {
+	width: 290px;
+	height: 25px;
+	margin: auto;
+	padding: 5px 0 5px 10px;
+	text-align: left;
+	text-decoration: underline;
+}
+
+#view-proj-task-status {
+	width: 290px;
+	height: 25px;
+	margin: auto;
+	text-align: left;
+	text-decoration: underline;
+}
+
+#view-proj-task-developer {
+	width: 290px;
+	height: 25px;
+	margin: auto;
+	text-align: left;
+	text-decoration: underline;
+}
+
+#view-proj-task-author {
+	width: 290px;
+	height: 25px;
+	margin: auto;
+	text-align: left;
+	text-decoration: underline;
+}
+
+#view-proj-task-description {
+	width: 290px;
+	height: 260px;
+	margin: auto;
+	text-align: justify;
+	word-wrap: break-word;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#delete-task-img {
+	float: right; width : 30px;
+	height: 30px;
+	background: url(res/close.png);
+	width: 30px;
+}
+
+#view-add-container{
+	width: 90%;
+	min-height: 200px;
+	background: white;
+	border-radius: 5px;
+	padding: 20px;
+	margin: 10px auto 10px auto;
+}
+
+#view-add-container textarea{
+	resize: none;
+	width: 100%;
+	height: 200px;
+	margin: 10px auto 10px auto;
+}
+
+#comments-main-container{
+	width: 90%;
+	min-height: 100px;
+	background: white;
+	border-radius: 5px;
+	padding: 20px;
+	margin: auto;
+}
+
+#comment-container div{
+	display: none;
+}
+
+#comment-container div textarea{
+	width: 100%;
+	resize: none;
+}
+
+#comment-container{
+	width: 100%;
+	min-height: 100px;
+	background: white;
+	border-radius: 5px;
+	margin: 10px auto 10px auto;
+	border: 1pt dotted gray;
+	padding: 5px 0 5px 5px;
+}
